@@ -1,0 +1,76 @@
+.App {
+  text-align: center;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.form {
+  margin-top: 2rem;
+  display:flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 350px;
+
+}
+
+.btn{
+  width: 100px;
+  color: blue;
+  margin: 20px;
+}
+
+.btnholder{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.greenleaf{
+  height: 170px;
+  width: 670px;
+  border-radius: 2rem;
+  -webkit-box-shadow: 6px 6px 13px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 6px 13px 0px rgba(0,0,0,0.75);
+box-shadow: 6px 6px 13px 0px rgba(0,0,0,0.75);
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#01fc01+0,00d002+100 */
+background: #01fc01; /* Old browsers */
+background: -moz-linear-gradient(top, #01fc01 0%, #00d002 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #01fc01 0%,#00d002 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #01fc01 0%,#00d002 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01fc01', endColorstr='#00d002',GradientType=0 ); /* IE6-9 */
+}
+
+label{
+  display:flex;
+  
+}
+
+ input,  select
+{
+flex-grow: 1;
+
+}
+
+h1 {
+  font-size: 60px;
+  display: center;
+  color: white;
+}
