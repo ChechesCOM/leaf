@@ -10,27 +10,22 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { hits: null };
+    this.state = {value: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  onSearch = (e) => {
-    e.preventDefault();
-
-    const { value } = this.input;
-
-    if (value === '') {
-      return;
-    }
-
-    fetch('' + value)
-      .then(response => response.json())
-      .then(result => this.onSetResult(result));
+  handleChange(event) {
+    this.setState({value: event.target.value});
   }
 
-  onSetResult = (result) => {
-    this.setState({ hits: result.hits });
+  handleSubmit(event) {
+    alert('Hemos recibido sus datos y nos pondremos en contacto.');
+    event.preventDefault();
   }
   render() {
+
     return (
       <div className="App">
 
@@ -41,28 +36,28 @@ class App extends Component {
 
         </div>
 
-        <form className="form">
+        <form className="form" onSubmit={this.handleSubmit}>
           <label>
             Name:
-    <input type="text" name="name" required />
+    <input type="text" name="name"  required />
           </label>
 
           <label>
             E-mail:
-              <input type="email" name="e-mail" required />
+              <input type="email" name="e-mail"  required />
           </label>
 
           <label>
             Telefono:
-              <input type="tel" name="telefono" required />
+              <input type="tel" name="telefono"  required />
           </label>
 
           <label>
             Fecha:
-              <input type="date" name="fecha" required />
+              <input type="date" name="fecha"  required />
 
           </label>
-
+        <div className="ciudad">
           <label>
 
             Ciudad y Estado:
@@ -137,6 +132,8 @@ class App extends Component {
             </select>
 
           </label>
+
+           </div>
 
           <div className="btnholder">
 

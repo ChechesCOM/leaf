@@ -5,7 +5,9 @@
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-scripts": "2.0.4"
+    "react-geolocation": "^1.0.4",
+    "react-scripts": "2.0.4",
+    "react-select-country": "0.0.15"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -46,6 +46,7 @@
   height: 170px;
   width: 670px;
   border-radius: 2rem;
+  margin-top: 100px;
   -webkit-box-shadow: 6px 6px 13px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 6px 6px 13px 0px rgba(0,0,0,0.75);
 box-shadow: 6px 6px 13px 0px rgba(0,0,0,0.75);
@@ -70,7 +71,11 @@ flex-grow: 1;
 }
 
 h1 {
+  display:flex;
+  flex-direction: left;
+  margin-left: 20px;
   font-size: 60px;
   display: center;
   color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif
 }
