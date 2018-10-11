@@ -43,6 +43,10 @@
 }
 
 .greenleaf{
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  padding:2rem;
   height: 170px;
   width: 670px;
   border-radius: 2rem;
@@ -73,9 +77,19 @@ flex-grow: 1;
 h1 {
   display:flex;
   flex-direction: left;
+  margin-top: -50px;
   margin-left: 20px;
   font-size: 60px;
   display: center;
   color: white;
   font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+.hoja{
+color:rgba(0,0,0,0.50);
+font-size: 10em !important;
+
+
+
+
 }
