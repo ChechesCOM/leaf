@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import 'font-awesome/css/font-awesome.min.css';
 import axios from 'axios'
+import {push} from 'react-router-redux'
 
 class App extends Component {
 
@@ -18,14 +19,15 @@ class App extends Component {
   }
 
   handleSubmit(event) {
+    push('/gracias')
     alert('Hemos recibido sus datos y nos pondremos en contacto.');
     event.preventDefault();
   }
 
-  getInitialState(){
-    return{
+  getInitialState() {
+    return {
       pais: [],
-      lista:[]
+      lista: []
     }
   }
 
@@ -33,13 +35,13 @@ class App extends Component {
 
     axios.get('https://restcountries.eu/rest/v2/all')
       .then(res => {
-        
+
         this.setState({ pais: res.data })
-       
-        this.setState({lista: this.state.pais.map((pais)=><option>{pais.name}</option>)});
+
+        this.setState({ lista: this.state.pais.map((pais) => <option>{pais.name}</option>) });
 
       })
-      
+
   }
 
 
@@ -78,11 +80,11 @@ class App extends Component {
           </label>
           <div className="ciudad">
             <label>
-                  <select>
-                
-                    {this.state.lista}                 
-                  
-                  </select>
+              <select>
+
+                {this.state.lista}
+
+              </select>
 
             </label>
 
